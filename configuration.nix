@@ -15,7 +15,7 @@
 
   wsl.enable = true;
   wsl.defaultUser = "nixos";
-  environment.systemPackages= with pkgs ;[ git ];
+  environment.systemPackages= with pkgs ;[ git neovim ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
