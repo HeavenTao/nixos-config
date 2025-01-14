@@ -26,6 +26,7 @@
           {
             system.stateVersion = "24.11";
             wsl.enable = true;
+            wsl.defaultUser = "ht";
           }
           home-manager.nixosModules.home-manager
           {
