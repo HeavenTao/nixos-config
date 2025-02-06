@@ -14,9 +14,12 @@
   ];
 in {
   users.users.${userName}.packages = packages;
-  system.activationScripts = lib.mkIf fisherEnable ''
+  system.activationScripts.fisherInstall = lib.mkIf fisherEnable ''
     echo "Install fisher"
-    export PATH=${pkgs.gnutar}/bin:${pkgs.curl}/bin:${pkgs.fish}/bin:$PATH
-    fish -c "source ${installScript} && fisher install jorgebucaran/fisher"
+    export http_proxy=http://192.168.3.4:7890
+    export https_proxy=http://192.168.3.4:7890
+    export PATH=${pkgs.gnutar}/bin:${pkgs.curl}/bin:${pkgs.fish}/bin:${pkgs.gzip}/bin:$PATH
+    export fisher_path=/home/${userName}/.config/fish
+    fish -c "source ${installScript} && fisher install jorgebucaran/fisher && fisher install IlanCosman/tide@v6"
   '';
 }
