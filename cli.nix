@@ -8,6 +8,7 @@
     git
     ripgrep
     lazygit
+    fzf
   ];
 in {
   users.users.${userName}.packages = packages;
