@@ -15,24 +15,29 @@
     nixpkgs,
     nixos-wsl,
     home-manager,
-  }: {
+  }: let
+    userName = "ht";
+  in {
     nixosConfigurations = {
       wsl = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          ./user.nix
+          (import ./neovim.nix {userName = userName;})
+          (import ./shell.nix {userName = userName;})
+          (import ./cli.nix {userName = userName;})
+          (import ./user.nix {userName = userName;})
           nixos-wsl.nixosModules.default
           {
             system.stateVersion = "24.11";
             wsl.enable = true;
-            wsl.defaultUser = "ht";
+            wsl.defaultUser = userName;
           }
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.ht = import ./home.nix;
+            home-manager.users.${userName} = import ./home.nix;
           }
         ];
       };
