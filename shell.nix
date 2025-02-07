@@ -14,12 +14,11 @@
   ];
 in {
   users.users.${userName}.packages = packages;
-  system.activationScripts.fisherInstall = lib.mkIf fisherEnable ''
-    echo "Install fisher"
-    export http_proxy=http://192.168.3.4:7890
-    export https_proxy=http://192.168.3.4:7890
-    export PATH=${pkgs.gnutar}/bin:${pkgs.curl}/bin:${pkgs.fish}/bin:${pkgs.gzip}/bin:$PATH
-    export fisher_path=/home/${userName}/.config/fish
-    fish -c "source ${installScript} && fisher install jorgebucaran/fisher && fisher install IlanCosman/tide@v6"
-  '';
+  # Fish 安装插件管理器 并安装插件
+
+  # curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+
+  # fisher install jorgebucaran/fisher
+  # fisher install IlanCosman/tide@v6
+  # fisher install jorgebucaran/autopair.fish
 }

@@ -11,6 +11,7 @@
     fzf
     bat
     eza
+    file
   ];
 in {
   users.users.${userName}.packages = packages;
