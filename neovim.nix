@@ -16,7 +16,7 @@
 
   # formatter packages
   formatterPackages = with pkgs; [
-    alejandra
+    alejandra # nix formatter
     nodePackages.prettier
     prettierd
     stylua

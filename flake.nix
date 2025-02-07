@@ -26,8 +26,6 @@
           (import ./neovim.nix {userName = userName;})
           (import ./shell.nix {
             userName = userName;
-            fisherEnable = true;
-            installScript = ./config/fish/fisher.fish;
           })
           (import ./cli.nix {userName = userName;})
           (import ./user.nix {userName = userName;})
