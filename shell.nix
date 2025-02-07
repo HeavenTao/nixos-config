@@ -1,8 +1,4 @@
-{
-  userName,
-  fisherEnable ? false,
-  installScript,
-}: {
+{userName}: {
   lib,
   pkgs,
   config,
