@@ -9,6 +9,7 @@
     nixd
     llvmPackages_19.libcxxClang
     llvmPackages_19.clang-unwrapped
+    typescript-language-server
   ];
   formatterPackages = with pkgs; [
     alejandra
