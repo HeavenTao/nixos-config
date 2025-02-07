@@ -9,6 +9,8 @@
     ripgrep
     lazygit
     fzf
+    bat
+    eza
   ];
 in {
   users.users.${userName}.packages = packages;

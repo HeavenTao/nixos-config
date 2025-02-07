@@ -6,6 +6,7 @@
 }: let
   lspPackages = with pkgs; [
     lua-language-server
+    vue-language-server
     nixd
     llvmPackages_19.libcxxClang
     llvmPackages_19.clang-unwrapped
