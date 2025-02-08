@@ -12,7 +12,6 @@
     bat
     eza
     file
-    zellij
   ];
 in {
   users.users.${userName}.packages = packages;
