@@ -12,7 +12,7 @@
     bat
     eza
     file
-    tmux
+    zellij
   ];
 in {
   users.users.${userName}.packages = packages;
