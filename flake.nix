@@ -29,11 +29,13 @@
           })
           (import ./cli.nix {userName = userName;})
           (import ./user.nix {userName = userName;})
+          (import ./windows.nix {userName = userName;})
           nixos-wsl.nixosModules.default
           {
             system.stateVersion = "24.11";
             wsl.enable = true;
             wsl.defaultUser = userName;
+            wsl.useWindowsDriver = true;
           }
           home-manager.nixosModules.home-manager
           {
