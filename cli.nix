@@ -12,6 +12,7 @@
     bat
     eza
     file
+    tmux
   ];
 in {
   users.users.${userName}.packages = packages;

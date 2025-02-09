@@ -4,4 +4,5 @@ if status is-interactive
     alias v="neovide.exe --wsl"
     alias cat="bat"
     alias ls="eza -la"
+    alias gst="git status"
 end
