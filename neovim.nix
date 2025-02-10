@@ -12,6 +12,7 @@
     llvmPackages_19.libcxxClang
     llvmPackages_19.clang-unwrapped
     typescript-language-server
+    vscode-langservers-extracted
   ];
 
   # formatter packages

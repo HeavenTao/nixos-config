@@ -5,4 +5,5 @@ if status is-interactive
     alias cat="bat"
     alias ls="eza -la"
     alias gst="git status"
+    alias gdf="git diff"
 end
