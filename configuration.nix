@@ -16,4 +16,5 @@
     else [/etc/nixos/hardware-configuration.nix];
   boot.loader.systemd-boot.enable = !isInWsl;
   boot.loader.efi.canTouchEfiVariables = !isInWsl;
+  services.openssh.enable = !isInWsl;
 }
