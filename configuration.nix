@@ -13,7 +13,7 @@
   imports =
     if isInWsl
     then []
-    else [./hardware-configuration.nix];
+    else [/etc/nixos/hardware-configuration.nix];
   boot.loader.systemd-boot.enable = !isInWsl;
   boot.loader.efi.canTouchEfiVariables = !isInWsl;
 }
