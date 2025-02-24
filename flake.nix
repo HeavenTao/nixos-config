@@ -22,7 +22,7 @@
       wsl = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          (import ./configuration.nix {isInWsl = true;})
           (import ./neovim.nix {userName = userName;})
           (import ./shell.nix {
             userName = userName;
@@ -37,6 +37,25 @@
             wsl.defaultUser = userName;
             wsl.useWindowsDriver = true;
           }
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${userName} = import ./home.nix;
+          }
+        ];
+      };
+      home = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          (import ./configuration.nix {isInWsl = false;})
+          (import ./neovim.nix {userName = userName;})
+          (import ./shell.nix {
+            userName = userName;
+          })
+          (import ./cli.nix {userName = userName;})
+          (import ./user.nix {userName = userName;})
+          (import ./windows.nix {userName = userName;})
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

@@ -3,11 +3,17 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
-{
+{isInWsl}: {
   config,
   lib,
   pkgs,
   ...
 }: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  imports =
+    if isInWsl
+    then []
+    else [./hardware-configuration.nix];
+  boot.loader.systemd-boot.enable = !isInWsl;
+  boot.loader.efi.canTouchEfiVariables = !isInWsl;
 }
