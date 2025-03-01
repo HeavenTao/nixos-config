@@ -13,6 +13,7 @@
     eza
     file
     tmux
+    pstree
   ];
 in {
   users.users.${userName}.packages = packages;
