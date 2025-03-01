@@ -16,8 +16,6 @@
       ];
     })
     rofi-wayland
-    #proxy
-    gui-for-clash
   ];
 in {
   users.users.${userName}.packages = packages;

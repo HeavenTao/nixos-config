@@ -29,7 +29,6 @@
           })
           (import ./cli.nix {userName = userName;})
           (import ./user.nix {userName = userName;})
-          (import ./windows.nix {userName = userName;})
           nixos-wsl.nixosModules.default
           {
             system.stateVersion = "24.11";
@@ -56,6 +55,7 @@
           (import ./cli.nix {userName = userName;})
           (import ./user.nix {userName = userName;})
           (import ./windows.nix {userName = userName;})
+          (import ./proxy.nix {userName = userName;})
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
