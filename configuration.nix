@@ -18,4 +18,7 @@
   boot.loader.systemd-boot.enable = !isInWsl;
   boot.loader.efi.canTouchEfiVariables = !isInWsl;
   services.openssh.enable = !isInWsl;
+  networking.nameservers = [
+    "8.8.8.8"
+  ];
 }
