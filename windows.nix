@@ -7,6 +7,12 @@
   packages = with pkgs; [
     alacritty
     ghostty
+    (google-chrome.override {
+      commandLineArgs = [
+        "--enable-features=UseOzonePlatform"
+        "--ozone-platform=wayland"
+      ];
+    })
   ];
 in {
   users.users.${userName}.packages = packages;
