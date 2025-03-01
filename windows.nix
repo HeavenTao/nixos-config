@@ -5,14 +5,19 @@
   ...
 }: let
   packages = with pkgs; [
+    #terminal
     alacritty
     ghostty
+    #browser
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"
         "--ozone-platform=wayland"
       ];
     })
+    rofi-wayland
+    #proxy
+    gui-for-clash
   ];
 in {
   users.users.${userName}.packages = packages;

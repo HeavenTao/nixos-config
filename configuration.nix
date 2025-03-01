@@ -18,6 +18,6 @@
   boot.loader.systemd-boot.enable = !isInWsl;
   boot.loader.efi.canTouchEfiVariables = !isInWsl;
   services.openssh.enable = !isInWsl;
-  networking.proxy.default = "http://192.168.3.2:7890";
-  networking.proxy.noProxy = "127.0.0.1,localhost,.localdomain";
+  networking.proxy.default = "http://127.0.0.1:7890";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,.localdomain";
 }
