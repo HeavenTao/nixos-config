@@ -47,6 +47,7 @@
       home = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          (import ./inputMethod.nix {userName = userName;})
           (import ./configuration.nix {isInWsl = false;})
           (import ./neovim.nix {userName = userName;})
           (import ./shell.nix {

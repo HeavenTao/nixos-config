@@ -9,6 +9,7 @@
     alacritty
     ghostty
     #browser
+    firefox
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"

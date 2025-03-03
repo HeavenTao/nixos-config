@@ -3,34 +3,27 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
-{
+{userName}: {
   config,
   lib,
   pkgs,
   ...
-}: {
-  i18n.inputMethod = {
-    type = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-chinese-addons
-      fcitx5-rime
-      fcitx5-gtk
-      fcitx5-qt6
-      fcitx5-configtool
-    ];
-  };
-
-  environment.sessionVariables = {
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-    XMODIFIRS = "@im=fcitx";
-    INPUT_METHOD = "fcitx";
-    SDL_IM_MODULE = "fcitx";
-  };
-
-  environment.systemPackages = with pkgs; [
-    libinput
-    xwayland
-    fcitx5-qt6
+}: let
+  packages = with pkgs; [
   ];
+in {
+  users.users.${userName}.packages = packages;
+  services.xserver.desktopManager.runXdgAutostartIfNone = false;
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5 = {
+      waylandFrontend = true;
+      addons = with pkgs; [
+        fcitx5-chinese-addons
+        fcitx5-gtk
+        fcitx5-configtool
+      ];
+    };
+  };
 }
