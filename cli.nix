@@ -13,6 +13,7 @@
     eza
     file
     tmux
+    yazi
   ];
 in {
   users.users.${userName}.packages = packages;
