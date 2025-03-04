@@ -14,6 +14,7 @@
     file
     tmux
     yazi
+    pstree
   ];
 in {
   users.users.${userName}.packages = packages;
