@@ -25,4 +25,11 @@ in {
     gdm.wayland = true;
   };
   programs.niri.enable = true;
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [
+        "Noto"
+      ];
+    })
+  ];
 }
