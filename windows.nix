@@ -9,7 +9,6 @@
     alacritty
     ghostty
     #browser
-    firefox
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"
@@ -17,6 +16,7 @@
       ];
     })
     rofi-wayland
+    wl-clipboard
   ];
 in {
   users.users.${userName}.packages = packages;

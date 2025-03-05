@@ -16,4 +16,10 @@ in {
   users.users.${userName}.packages = packages;
   networking.proxy.default = "http://127.0.0.1:7890";
   # networking.proxy.noProxy = "127.0.0.1,localhost,.localdomain";
+  services.mihomo = {
+    enable = true;
+    # 安装好之后，Controy.mmdb文件需要自己copy到指定目录，这个目录需要看它的服务是从什么地方加载的
+    configFile = /home/ht/.config/mihomo/config.yaml;
+    webui = pkgs.metacubexd;
+  };
 }
