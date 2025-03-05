@@ -10,5 +10,4 @@
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
   };
-  time.timeZone = "Asia/Shanghai";
 }

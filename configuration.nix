@@ -21,4 +21,5 @@
   networking.nameservers = [
     "8.8.8.8"
   ];
+  time.timeZone = "Asia/Shanghai";
 }
