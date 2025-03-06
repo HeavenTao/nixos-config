@@ -4,15 +4,21 @@
   config,
   ...
 }: let
+  #code
+  codePackages = with pkgs; [
+    llvmPackages_19.libcxxClang
+    llvmPackages_19.clang-unwrapped
+    zig
+  ];
+
   # lsp packages
   lspPackages = with pkgs; [
     lua-language-server
     vue-language-server
     nixd
-    llvmPackages_19.libcxxClang
-    llvmPackages_19.clang-unwrapped
     typescript-language-server
     vscode-langservers-extracted
+    zls
   ];
 
   # formatter packages
@@ -23,7 +29,7 @@
     stylua
   ];
   #meger
-  allPackages = [lspPackages formatterPackages];
+  allPackages = [lspPackages formatterPackages codePackages];
 in {
   users.users.${userName}.packages = builtins.concatLists allPackages;
   programs.neovim = {
