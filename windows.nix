@@ -1,4 +1,7 @@
-{userName}: {
+{
+  userName,
+  pkgsUnstable,
+}: {
   lib,
   pkgs,
   config,
@@ -9,6 +12,7 @@
     # alacritty
     ghostty
     #browser
+    firefox
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"
@@ -25,6 +29,7 @@ in {
     gdm.wayland = true;
   };
   programs.niri.enable = true;
+  programs.niri.package = pkgs.niri;
   fonts.packages = with pkgs; [
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif

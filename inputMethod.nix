@@ -32,7 +32,6 @@ in {
         rime-data
         fcitx5-rime
         librime
-        fcitx5-chinese-addons
         fcitx5-configtool
       ];
     };

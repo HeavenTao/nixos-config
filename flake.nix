@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -14,9 +15,12 @@
     self,
     nixpkgs,
     nixos-wsl,
+    nixpkgs-unstable,
     home-manager,
   }: let
+    system = "x86_64-linux";
     userName = "ht";
+    pkgsUnstable = import nixpkgs-unstable {inherit system;};
   in {
     nixosConfigurations = {
       wsl = nixpkgs.lib.nixosSystem {
@@ -55,7 +59,10 @@
           })
           (import ./cli.nix {userName = userName;})
           (import ./user.nix {userName = userName;})
-          (import ./windows.nix {userName = userName;})
+          (import ./windows.nix {
+            userName = userName;
+            pkgsUnstable = pkgsUnstable;
+          })
           (import ./proxy.nix {userName = userName;})
           home-manager.nixosModules.home-manager
           {
