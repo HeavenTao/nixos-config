@@ -6,7 +6,7 @@
 }: let
   packages = with pkgs; [
     #terminal
-    alacritty
+    # alacritty
     ghostty
     #browser
     (google-chrome.override {
@@ -26,6 +26,8 @@ in {
   };
   programs.niri.enable = true;
   fonts.packages = with pkgs; [
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     (nerdfonts.override {
       fonts = [
         "Noto"
