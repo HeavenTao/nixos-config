@@ -13,26 +13,29 @@
   ];
 in {
   users.users.${userName}.packages = packages;
-  environment.variables = {
-    GLFW_IM_MODULE = "fcitx";
-    GTK_IM_MODULE = "fctix";
-    INPUT_METHOD = "fcitx";
-    XMODIFIERS = "@im=fcitx";
-    IMSETTINGS_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-    SDL_IM_MODULE = "fctix";
-  };
+  # environment.variables = {
+  #   GLFW_IM_MODULE = "fcitx";
+  #   GTK_IM_MODULE = "fctix";
+  #   INPUT_METHOD = "fcitx";
+  #   XMODIFIERS = "@im=fcitx";
+  #   IMSETTINGS_MODULE = "fcitx";
+  #   QT_IM_MODULE = "fcitx";
+  #   SDL_IM_MODULE = "fctix";
+  # };
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
     fcitx5 = {
       waylandFrontend = true;
       addons = with pkgs; [
-        rime-zhwiki
-        rime-data
-        fcitx5-rime
-        librime
+        # rime-zhwiki
+        # rime-data
+        # fcitx5-rime
+        # librime
+        fcitx5-chinese-addons
         fcitx5-configtool
+        fcitx5-gtk
+        fcitx5-skk-qt
       ];
     };
   };
