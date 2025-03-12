@@ -15,6 +15,7 @@
     tmux
     yazi
     pstree
+    mdbook #markdown edit server
   ];
 in {
   users.users.${userName}.packages = packages;
