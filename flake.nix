@@ -9,6 +9,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zlsPackages.url = "https://github.com/zigtools/zls/archive/refs/tags/0.14.0.tar.gz";
   };
 
   outputs = {
@@ -17,10 +18,12 @@
     nixos-wsl,
     nixpkgs-unstable,
     home-manager,
+    zlsPackages,
   }: let
     system = "x86_64-linux";
     userName = "ht";
     pkgsUnstable = import nixpkgs-unstable {inherit system;};
+    # zls = import zlsPackages {inherit system;};
   in {
     nixosConfigurations = {
       wsl = nixpkgs.lib.nixosSystem {

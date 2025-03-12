@@ -1,7 +1,4 @@
-{
-  userName,
-  pkgsUnstable,
-}: {
+{...} @ args: {
   lib,
   pkgs,
   config,
@@ -11,7 +8,8 @@
   codePackages = with pkgs; [
     llvmPackages_19.libcxxClang
     llvmPackages_19.clang-unwrapped
-    zig
+    # zig
+    args.pkgsUnstable.zig
   ];
 
   # lsp packages
@@ -21,9 +19,9 @@
     nixd
     typescript-language-server
     vscode-langservers-extracted
-    zls
+    # zls
+    # args.zls
   ];
-
   # formatter packages
   formatterPackages = with pkgs; [
     alejandra # nix formatter
@@ -34,7 +32,7 @@
   #meger
   allPackages = [lspPackages formatterPackages codePackages];
 in {
-  users.users.${userName}.packages = builtins.concatLists allPackages;
+  users.users.${args.userName}.packages = builtins.concatLists allPackages;
   programs.neovim = {
     enable = true;
     withNodeJs = true;
