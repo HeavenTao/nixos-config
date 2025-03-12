@@ -27,7 +27,10 @@
         system = "x86_64-linux";
         modules = [
           (import ./configuration.nix {isInWsl = true;})
-          (import ./neovim.nix {userName = userName;})
+          (import ./neovim.nix {
+            userName = userName;
+            pkgsUnstable = pkgsUnstable;
+          })
           (import ./shell.nix {
             userName = userName;
           })
@@ -53,7 +56,10 @@
         modules = [
           (import ./inputMethod.nix {userName = userName;})
           (import ./configuration.nix {isInWsl = false;})
-          (import ./neovim.nix {userName = userName;})
+          (import ./neovim.nix {
+            userName = userName;
+            pkgsUnstable = pkgsUnstable;
+          })
           (import ./shell.nix {
             userName = userName;
           })

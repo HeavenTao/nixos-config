@@ -1,4 +1,7 @@
-{userName}: {
+{
+  userName,
+  pkgsUnstable,
+}: {
   lib,
   pkgs,
   config,
