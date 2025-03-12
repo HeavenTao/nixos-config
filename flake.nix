@@ -23,7 +23,6 @@
     system = "x86_64-linux";
     userName = "ht";
     pkgsUnstable = import nixpkgs-unstable {inherit system;};
-    # zls = import zlsPackages {inherit system;};
   in {
     nixosConfigurations = {
       wsl = nixpkgs.lib.nixosSystem {
@@ -33,6 +32,8 @@
           (import ./neovim.nix {
             userName = userName;
             pkgsUnstable = pkgsUnstable;
+            zlsPackages = zlsPackages;
+            system = system;
           })
           (import ./shell.nix {
             userName = userName;
@@ -62,6 +63,8 @@
           (import ./neovim.nix {
             userName = userName;
             pkgsUnstable = pkgsUnstable;
+            zlsPackages = zlsPackages;
+            system = system;
           })
           (import ./shell.nix {
             userName = userName;

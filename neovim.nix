@@ -19,8 +19,7 @@
     nixd
     typescript-language-server
     vscode-langservers-extracted
-    # zls
-    # args.zls
+    args.zlsPackages.packages.${args.system}.zls
   ];
   # formatter packages
   formatterPackages = with pkgs; [
