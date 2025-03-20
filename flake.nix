@@ -9,7 +9,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zlsPackages.url = "https://github.com/zigtools/zls/archive/refs/tags/0.14.0.tar.gz";
   };
 
   outputs = {
@@ -18,7 +17,6 @@
     nixos-wsl,
     nixpkgs-unstable,
     home-manager,
-    zlsPackages,
   }: let
     system = "x86_64-linux";
     userName = "ht";
@@ -32,7 +30,6 @@
           (import ./neovim.nix {
             userName = userName;
             pkgsUnstable = pkgsUnstable;
-            zlsPackages = zlsPackages;
             system = system;
           })
           (import ./shell.nix {
@@ -63,7 +60,6 @@
           (import ./neovim.nix {
             userName = userName;
             pkgsUnstable = pkgsUnstable;
-            zlsPackages = zlsPackages;
             system = system;
           })
           (import ./shell.nix {
