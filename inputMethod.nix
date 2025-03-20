@@ -28,14 +28,14 @@ in {
     fcitx5 = {
       waylandFrontend = true;
       addons = with pkgs; [
-        # rime-zhwiki
-        # rime-data
-        # fcitx5-rime
+        rime-zhwiki
+        rime-data
+        fcitx5-rime
         # librime
-        fcitx5-chinese-addons
+        # fcitx5-chinese-addons
         fcitx5-configtool
         fcitx5-gtk
-        fcitx5-skk-qt
+        # fcitx5-skk-qt
       ];
     };
   };
