@@ -4,17 +4,20 @@
   config,
   ...
 }: {
+  # cli
   # fish
   home.file.".config/fish/config.fish" = {
     source = ./config/fish/config.fish;
   };
-  # niri
-  home.file.".config/niri/config.kdl" = {
-    source = ./config/niri/config.kdl;
-  };
   # tmux
   home.file.".tmux.conf" = {
     source = ./config/tmux/.tmux.conf;
+  };
+
+  #windows
+  # niri
+  home.file.".config/niri/config.kdl" = {
+    source = ./config/niri/config.kdl;
   };
   # ghostty
   home.file.".config/ghostty/config" = {
