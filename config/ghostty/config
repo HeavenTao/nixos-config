@@ -41,7 +41,14 @@
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
-font-family = "NotoMono NFM"
+font-family = "Maple Mono"
+font-feature= +zero,+cv03,+ss03
+font-variation = wght=400
+font-variation = wdth=100
+
+font-family-italic= "Maple Mono Italic"
+font-variation-italic = wght=200
+
 font-size = 14
 window-decoration = false
 theme= tokyonight_night

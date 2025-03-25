@@ -12,7 +12,7 @@
     # alacritty
     ghostty
     #browser
-    # firefox
+    firefox
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"
@@ -31,6 +31,7 @@ in {
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
   fonts.packages = with pkgs; [
+    pkgsUnstable.maple-mono.Normal-Variable
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     (nerdfonts.override {
