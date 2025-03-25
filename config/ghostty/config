@@ -52,3 +52,5 @@ font-variation-italic = wght=200
 font-size = 14
 window-decoration = false
 theme= tokyonight_night
+
+mouse-hide-while-typing=true
