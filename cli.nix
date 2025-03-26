@@ -14,7 +14,7 @@
     file
     tmux
     yazi
-    pstree
+    btop
     mdbook #markdown edit server
   ];
 in {

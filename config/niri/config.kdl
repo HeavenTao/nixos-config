@@ -202,7 +202,7 @@ layout {
 // which may be more convenient to use.
 // spawn-at-startup "alacritty" "-e" "fish"
 //spawn-at-startup "hyprpaper" "-c" "/home/ht/.config/niri/hyprpaper.conf"
-//spawn-at-startup "fcitx5"
+spawn-at-startup "fcitx5 -d"
 //spawn-at-startup "ags"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -284,6 +284,9 @@ binds {
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
     //Super+Alt+L { spawn "swaylock"; }
+
+    //switch input methods
+    Ctrl+Space { spawn "fcitx5-remote" "-t"; }
 
     // You can also use a shell:
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
