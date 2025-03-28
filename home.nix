@@ -39,6 +39,7 @@
     source = ./config/fcitx5/themes/winter;
     recursive = true;
   };
+
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 }

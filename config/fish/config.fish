@@ -6,6 +6,8 @@ if status is-interactive
     alias ls="eza -la"
     alias gst="git status"
     alias gdf="git diff"
+
+    fish_add_path "$HOME/.dotnet/tools"
 end
 
 function y
