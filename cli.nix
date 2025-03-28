@@ -1,4 +1,4 @@
-{userName}: {
+{...} @ args: {
   lib,
   pkgs,
   config,
@@ -16,7 +16,8 @@
     yazi
     btop
     mdbook #markdown edit server
+    args.pkgsUnstable.lazyjournal
   ];
 in {
-  users.users.${userName}.packages = packages;
+  users.users.${args.userName}.packages = packages;
 }

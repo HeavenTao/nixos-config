@@ -35,7 +35,10 @@
           (import ./shell.nix {
             userName = userName;
           })
-          (import ./cli.nix {userName = userName;})
+          (import ./cli.nix {
+            userName = userName;
+            pkgsUnstable = pkgsUnstable;
+          })
           (import ./user.nix {userName = userName;})
           nixos-wsl.nixosModules.default
           {
@@ -65,7 +68,10 @@
           (import ./shell.nix {
             userName = userName;
           })
-          (import ./cli.nix {userName = userName;})
+          (import ./cli.nix {
+            userName = userName;
+            pkgsUnstable = pkgsUnstable;
+          })
           (import ./user.nix {userName = userName;})
           (import ./windows.nix {
             userName = userName;
