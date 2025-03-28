@@ -10,7 +10,7 @@
     llvmPackages_19.clang-unwrapped
     # zig
     args.pkgsUnstable.zig
-    dotnetCorePackages.dotnet_8.sdk
+    # dotnetCorePackages.dotnet_8.sdk
   ];
 
   # lsp packages
@@ -39,7 +39,7 @@ in {
     withPython3 = true;
     defaultEditor = true;
   };
-  environment.sessionVariables = {
-    DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
-  };
+  # environment.sessionVariables = {
+  #   DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
+  # };
 }
