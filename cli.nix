@@ -16,7 +16,6 @@
     yazi
     btop
     mdbook #markdown edit server
-    args.pkgsUnstable.lazyjournal
   ];
 in {
   users.users.${args.userName}.packages = packages;
