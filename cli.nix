@@ -16,6 +16,7 @@
     yazi
     btop
     mdbook #markdown edit server
+    lnav
   ];
 in {
   users.users.${args.userName}.packages = packages;
