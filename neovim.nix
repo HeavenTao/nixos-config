@@ -21,6 +21,7 @@
     typescript-language-server
     vscode-langservers-extracted
     args.pkgsUnstable.zls
+    yaml-language-server
   ];
   # formatter packages
   formatterPackages = with pkgs; [
