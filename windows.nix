@@ -11,6 +11,7 @@
     #terminal
     # alacritty
     ghostty
+
     #browser
     # firefox
     (google-chrome.override {
@@ -21,8 +22,15 @@
     })
     rofi-wayland
     wl-clipboard
+
+    #editor
+    vscode
   ];
 in {
+  environment.sessionVariables = {
+    #wayland vscode
+    NIXOS_OZONE_WL = 1;
+  };
   users.users.${userName}.packages = packages;
   services.xserver.displayManager = {
     gdm.enable = true;
