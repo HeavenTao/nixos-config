@@ -44,7 +44,7 @@ in {
     withNodeJs = true;
     withPython3 = true;
     defaultEditor = true;
-    # package = args.pkgsUnstable.neovim-unwrapped;
+    package = args.pkgsUnstable.neovim-unwrapped;
   };
   # environment.sessionVariables = {
   #   DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
