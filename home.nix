@@ -40,6 +40,17 @@
     recursive = true;
   };
 
+  #kitty
+  home.file.".config/kitty/kitty.conf" = {
+    source = ./config/kitty/kitty.conf;
+  };
+  home.file.".config/kitty/kitty.conf.bak" = {
+    source = ./config/kitty/kitty.conf.bak;
+  };
+  home.file.".config/kitty/current-theme.conf" = {
+    source = ./config/kitty/current-theme.conf;
+  };
+
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 }

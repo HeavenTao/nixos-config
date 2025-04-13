@@ -11,6 +11,7 @@
     #terminal
     # alacritty
     ghostty
+    kitty
 
     #browser
     # firefox

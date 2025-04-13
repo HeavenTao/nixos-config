@@ -247,7 +247,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="ghostty"
+    match app-id="kitty"
     match app-id="chrome"
     open-maximized true
 }
@@ -279,7 +279,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "ghostty"; }
+    Mod+Return { spawn "kitty"; }
     Mod+P { spawn "rofi" "-show" "run"; }
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }

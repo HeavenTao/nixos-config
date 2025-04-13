@@ -30,8 +30,13 @@
     prettierd
     stylua
   ];
+
+  #debugger
+  debuggerPackages = with pkgs; [
+    lldb_19
+  ];
   #meger
-  allPackages = [lspPackages formatterPackages codePackages];
+  allPackages = [lspPackages formatterPackages codePackages debuggerPackages];
 in {
   users.users.${args.userName}.packages = builtins.concatLists allPackages;
   programs.neovim = {
