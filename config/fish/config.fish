@@ -6,6 +6,7 @@ if status is-interactive
     alias ls="eza -la"
     alias gst="git status"
     alias gdf="git diff"
+    set -uX MANPAGER 'nvim +Man!'
 end
 
 function y
