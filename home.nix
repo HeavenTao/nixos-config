@@ -51,6 +51,11 @@
     source = ./config/kitty/current-theme.conf;
   };
 
+  # ssh git
+  home.file.".ssh/config" = {
+    source = ./config/ssh/config;
+  };
+
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 }
