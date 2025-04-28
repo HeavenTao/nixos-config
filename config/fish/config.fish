@@ -6,6 +6,8 @@ if status is-interactive
     alias ls="eza -la"
     alias gst="git status"
     alias gdf="git diff"
+    alias log="journalctl -o short-full"
+    alias tlog="journalctl -o short-full --since=(date +%Y-%m-%d)"
     set -Ux MANPAGER 'nvim +Man!'
 end
 

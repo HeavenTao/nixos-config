@@ -10,7 +10,7 @@
   ...
 }: let
   packages = with pkgs; [
-    gui-for-clash
+    mihomo
   ];
 in {
   users.users.${userName}.packages = packages;
@@ -21,5 +21,6 @@ in {
     # 安装好之后，Controy.mmdb文件需要自己copy到指定目录，这个目录需要看它的服务是从什么地方加载的
     configFile = /home/ht/.config/mihomo/config.yaml;
     webui = pkgs.metacubexd;
+    tunMode = false;
   };
 }
