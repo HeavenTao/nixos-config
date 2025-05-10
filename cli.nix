@@ -15,13 +15,13 @@
     tmux
     yazi
     btop
-    mdbook #markdown edit server
-    lnav
+    # mdbook #markdown edit server
+    # lnav
     zip
     unzip
     #domain name server
     #dig @8.8.8.8 google.com
-    dig
+    # dig
   ];
 in {
   users.users.${args.userName}.packages = packages;
