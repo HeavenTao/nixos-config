@@ -22,6 +22,7 @@
     #domain name server
     #dig @8.8.8.8 google.com
     # dig
+    translate-shell
   ];
 in {
   users.users.${args.userName}.packages = packages;
