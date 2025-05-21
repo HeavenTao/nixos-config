@@ -18,6 +18,7 @@
     lua-language-server
     vue-language-server
     nixd
+    nil
     typescript-language-server
     vscode-langservers-extracted
     args.pkgsUnstable.zls
