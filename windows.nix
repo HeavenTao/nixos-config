@@ -43,10 +43,6 @@ in {
     pkgsUnstable.maple-mono.Normal-Variable
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
-    (nerdfonts.override {
-      fonts = [
-        "Noto"
-      ];
-    })
+    nerd-fonts.noto
   ];
 }
