@@ -8,6 +8,9 @@ if status is-interactive
     alias gdf="git diff"
     alias log="journalctl -o short-full"
     alias tlog="journalctl -o short-full --since=(date +%Y-%m-%d)"
+    alias tn="tmux new-session"
+    alias tl="tmux list-session"
+    alias ta="tmux attach-session"
     set -Ux MANPAGER 'nvim +Man!'
 end
 
