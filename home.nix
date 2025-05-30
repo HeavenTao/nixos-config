@@ -10,8 +10,8 @@
     source = ./config/fish/config.fish;
   };
   # tmux
-  home.file."tmux.conf" = {
-    source = ./config/tmux/.tmux.conf;
+  home.file.".tmux.conf" = {
+    source = ./config/tmux/tmux.conf;
   };
 
   #windows
