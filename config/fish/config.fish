@@ -12,6 +12,10 @@ if status is-interactive
     alias tl="tmux list-session"
     alias ta="tmux attach-session"
     set -Ux MANPAGER 'nvim +Man!'
+    if set -q NVIM
+    else
+      tn
+    end
 end
 
 function y
