@@ -40,7 +40,7 @@ in {
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
   fonts.packages = with pkgs; [
-    pkgsUnstable.maple-mono.Normal-Variable
+    pkgsUnstable.maple-mono.Normal-NF-CN-unhinted
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     nerd-fonts.noto
