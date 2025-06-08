@@ -6,8 +6,9 @@
 }: let
   packages = with pkgs; [
     git
-    ripgrep
     lazygit
+    ripgrep
+    fd
     fzf
     bat
     eza
@@ -23,6 +24,7 @@
     #dig @8.8.8.8 google.com
     # dig
     translate-shell
+    zoxide
   ];
 in {
   users.users.${args.userName}.packages = packages;
