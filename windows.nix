@@ -10,7 +10,7 @@
   packages = with pkgs; [
     #terminal
     # alacritty
-    ghostty
+    # ghostty
     kitty
 
     #browser
