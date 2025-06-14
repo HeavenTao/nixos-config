@@ -156,5 +156,7 @@ configuration {
   }
 }
 
-@theme "./gruvbox-dark-hard.rasi"
+// @theme "./gruvbox-dark-hard.rasi"
+@theme "./dmenu.rasi"
+
 

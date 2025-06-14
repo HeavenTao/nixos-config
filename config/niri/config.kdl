@@ -98,7 +98,7 @@ output "HDMI-A-2" {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 5
+    gaps 2
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -143,7 +143,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 3
+        width 1
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -177,7 +177,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 4
+        width 1
         active-color "#ffc87f"
         inactive-color "#505050"
 
@@ -209,7 +209,7 @@ spawn-at-startup "fcitx5 -d"
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some rounded corners.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -235,7 +235,7 @@ animations {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 window-rule {
         clip-to-geometry true
-        geometry-corner-radius 12
+        geometry-corner-radius 0
     }
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.

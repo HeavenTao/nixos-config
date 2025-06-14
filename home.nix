@@ -6,9 +6,6 @@
 }: {
   # cli
   # fish
-  home.file.".config/fish/config.fish" = {
-    source = ./config/fish/config.fish;
-  };
   # tmux
   home.file.".tmux.conf" = {
     source = ./config/tmux/tmux.conf;
@@ -18,10 +15,6 @@
   # niri
   home.file.".config/niri/config.kdl" = {
     source = ./config/niri/config.kdl;
-  };
-  # ghostty
-  home.file.".config/ghostty/config" = {
-    source = ./config/ghostty/config;
   };
   # rofi
   home.file.".config/rofi/config.rasi" = {
