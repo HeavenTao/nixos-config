@@ -5,7 +5,14 @@
   ...
 }: {
   # cli
-  # fish
+  # zsh
+  home.file.".zshrc" = {
+    source = ./config/zsh/zshrc;
+  };
+  home.file.".zimrc" = {
+    source = ./config/zsh/zimrc;
+  };
+
   # tmux
   home.file.".tmux.conf" = {
     source = ./config/tmux/tmux.conf;
