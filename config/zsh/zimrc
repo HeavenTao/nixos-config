@@ -68,4 +68,3 @@ zmodule fzf
 
 zmodule git 
 
-zmodule duration-info

@@ -132,7 +132,7 @@ unset key
 # Created by newuser for 5.9
 #
 # ZIM minimal themes
-export MNML_USER_CHAR=''
+export MNML_USER_CHAR=''
 
 # alias
 alias v="neovide.exe --wsl"
