@@ -283,7 +283,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "kitty"; }
     // Mod+Return { spawn "ghostty"; }
-    Mod+P { spawn "rofi" "-show" "run"; }
+    // Mod+P { spawn "rofi" "-show" "run"; }
+    Mod+P { spawn "wmenu-run" "-f" "16" "-S" "#9d7cd8" "-p" " " "-M" "#9d7cd8"; }
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
     //Super+Alt+L { spawn "swaylock"; }

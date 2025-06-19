@@ -21,8 +21,9 @@
         "--ozone-platform=wayland"
       ];
     })
-    rofi-wayland
+    # rofi-wayland
     wl-clipboard
+    wmenu
 
     #editor
     vscode
