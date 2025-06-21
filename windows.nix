@@ -26,7 +26,8 @@
     wmenu
 
     #editor
-    vscode
+    #vscode
+    wbg
   ];
 in {
   environment.sessionVariables = {

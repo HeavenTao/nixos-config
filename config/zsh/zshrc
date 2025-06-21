@@ -133,6 +133,7 @@ unset key
 #
 # ZIM minimal themes
 export MNML_USER_CHAR=''
+export KEYTIMEOUT=5
 
 # alias
 alias v="neovide.exe --wsl"

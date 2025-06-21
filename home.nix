@@ -6,9 +6,9 @@
 }: {
   # cli
   # zsh
-  home.file.".zshrc" = {
-    source = ./config/zsh/zshrc;
-  };
+  # home.file.".zshrc" = {
+  #   source = ./config/zsh/zshrc;
+  # };
   home.file.".zimrc" = {
     source = ./config/zsh/zimrc;
   };
@@ -54,6 +54,11 @@
   # ssh git
   home.file.".ssh/config" = {
     source = ./config/ssh/config;
+  };
+
+  # wallpapers
+  home.file.".config/wallpapers/bg.jpeg" = {
+    source = ./wallpapers/bg.jpeg;
   };
 
   home.stateVersion = "25.05";
