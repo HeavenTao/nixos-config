@@ -6,9 +6,9 @@
 }: {
   # cli
   # zsh
-  # home.file.".zshrc" = {
-  #   source = ./config/zsh/zshrc;
-  # };
+  home.file.".zshrc" = {
+    source = ./config/zsh/zshrc;
+  };
   home.file.".zimrc" = {
     source = ./config/zsh/zimrc;
   };
