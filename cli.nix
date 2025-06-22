@@ -14,7 +14,8 @@
     eza
     file
     tmux
-    yazi
+    # yazi
+    lf
     btop
     # mdbook #markdown edit server
     # lnav
