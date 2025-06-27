@@ -136,6 +136,12 @@ export MNML_USER_CHAR=''
 export KEYTIMEOUT=5
 export BROWSER="firefox"
 
+#man 手册彩色显示
+export GROFF_NO_SGR=1
+
+export FZF_DEFAULT_COMMAND="fd --type f"
+
+
 # alias
 alias v="neovide.exe --wsl"
 alias cat="bat"
@@ -145,3 +151,28 @@ alias tn="tmux new-session"
 alias tl="tmux list-session"
 alias ta="tmux attach-session"
 alias v="nvim"
+
+# options
+# 默认选中第一个
+setopt menucomplete
+
+# use nvim open fzf resultf
+fzf_nvim_open ()
+{
+ local file 
+ local orig_buffer=$BUFFER
+ local orig_cursor=$CURSOR
+ BUFFER=""
+ zle redisplay
+ file=$(fd . --type f 2>/dev/null | fzf --reverse --prompt="select file> " --style minimal)
+ if [ -n "$file" ]; then
+   nvim "$file"
+ fi
+
+ BUFFER=$orig_buffer
+ CURSOR=$orig_cursor
+ zle redisplay
+}
+
+zle -N fzf_nvim_open
+bindkey '^F' fzf_nvim_open
