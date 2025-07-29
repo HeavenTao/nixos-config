@@ -23,6 +23,7 @@
     vscode-langservers-extracted
     args.pkgsUnstable.zls
     yaml-language-server
+    vscode-extensions.vadimcn.vscode-lldb
   ];
   # formatter packages
   formatterPackages = with pkgs; [
