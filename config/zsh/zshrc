@@ -164,7 +164,7 @@ fzf_nvim_open ()
  local orig_cursor=$CURSOR
  BUFFER=""
  zle redisplay
- file=$(fd . --type f 2>/dev/null | fzf --reverse --prompt="select file> " --style minimal)
+ file=$(fd . --type f 2>/dev/null | fzf --height 40% --reverse --prompt="select file> " --style minimal)
  if [ -n "$file" ]; then
    nvim "$file"
  fi

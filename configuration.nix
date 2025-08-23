@@ -22,4 +22,5 @@
     "8.8.8.8"
   ];
   time.timeZone = "Asia/Shanghai";
+  system.stateVersion = "25.05";
 }

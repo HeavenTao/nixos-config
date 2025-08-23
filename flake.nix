@@ -42,7 +42,7 @@
           (import ./user.nix {userName = userName;})
           nixos-wsl.nixosModules.default
           {
-            system.stateVersion = "24.11";
+            system.stateVersion = "25.05";
             wsl.enable = true;
             wsl.defaultUser = userName;
             wsl.useWindowsDriver = true;
