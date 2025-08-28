@@ -26,6 +26,7 @@
     # dig
     translate-shell
     zoxide
+    gnumake
   ];
 in {
   users.users.${args.userName}.packages = packages;
