@@ -8,8 +8,8 @@
   codePackages = with pkgs; [
     llvmPackages_19.libcxxClang
     llvmPackages_19.clang-unwrapped
-    zig
-    # args.pkgsUnstable.zig
+    # zig
+    args.pkgsUnstable.zig_0_15
     # dotnetCorePackages.dotnet_8.sdk
   ];
 
@@ -17,12 +17,11 @@
   lspPackages = with pkgs; [
     lua-language-server
     vue-language-server
-    nixd
-    nil
+    args.pkgsUnstable.nil
     typescript-language-server
     vscode-langservers-extracted
-    zls
-    # args.pkgsUnstable.zls
+    # zls
+    args.pkgsUnstable.zls_0_15
     yaml-language-server
     vscode-extensions.vadimcn.vscode-lldb
   ];
