@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-commit.url = "https://github.com/NixOS/nixpkgs/tarball/e6ff273e692674c3e9e078f1f1200f2eca4df63a";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -16,11 +17,13 @@
     nixpkgs,
     nixos-wsl,
     nixpkgs-unstable,
+    nixpkgs-commit,
     home-manager,
   }: let
     system = "x86_64-linux";
     userName = "ht";
     pkgsUnstable = import nixpkgs-unstable {inherit system;};
+    pkgsCommit = import nixpkgs-commit {inherit system;};
   in {
     nixosConfigurations = {
       wsl = nixpkgs.lib.nixosSystem {
@@ -31,6 +34,7 @@
             userName = userName;
             pkgsUnstable = pkgsUnstable;
             system = system;
+            pkgsCommit = pkgsCommit;
           })
           (import ./shell.nix {
             userName = userName;
@@ -64,6 +68,7 @@
             userName = userName;
             pkgsUnstable = pkgsUnstable;
             system = system;
+            pkgsCommit = pkgsCommit;
           })
           (import ./shell.nix {
             userName = userName;
