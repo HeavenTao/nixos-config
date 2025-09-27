@@ -20,16 +20,9 @@
 
   #windows
   # niri
-  home.file.".config/niri/config.kdl" = {
-    source = ./config/niri/config.kdl;
-  };
-  # rofi
-  home.file.".config/rofi/config.rasi" = {
-    source = ./config/rofi/config.rasi;
-  };
-  home.file.".config/rofi/gruvbox-dark-hard.rasi" = {
-    source = ./config/rofi/gruvbox-dark-hard.rasi;
-  };
+  # home.file.".config/niri/config.kdl" = {
+  #   source = ./config/niri/config.kdl;
+  # };
   # fcitx5
   home.file.".local/share/fcitx5/themes/macOS-dark" = {
     source = ./config/fcitx5/themes/macOS-dark;
@@ -59,6 +52,11 @@
   # wallpapers
   home.file.".config/wallpapers/bg.jpeg" = {
     source = ./wallpapers/bg.jpeg;
+  };
+
+  # river
+  home.file.".config/river/init" = {
+    source = ./config/river/init;
   };
 
   home.stateVersion = "25.05";
