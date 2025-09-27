@@ -27,6 +27,7 @@
     translate-shell
     zoxide
     gnumake
+    wev
   ];
 in {
   users.users.${args.userName}.packages = packages;

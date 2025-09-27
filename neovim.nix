@@ -21,7 +21,7 @@
     typescript-language-server
     vscode-langservers-extracted
     # zls
-    args.pkgsCommit.zls_0_15
+    args.pkgsUnstable.zls_0_15
     yaml-language-server
     vscode-extensions.vadimcn.vscode-lldb
   ];
