@@ -10,7 +10,7 @@
   packages = with pkgs; [
     #terminal
     # alacritty
-    # ghostty
+    pkgsUnstable.ghostty
     kitty
 
     #browser
@@ -39,8 +39,11 @@ in {
     gdm.enable = true;
     gdm.wayland = true;
   };
-  programs.niri.enable = true;
-  programs.niri.package = pkgs.niri;
+  # programs.niri.enable = true;
+  # programs.niri.package = pkgs.niri;
+
+  programs.river.enable = true;
+
   fonts.packages = with pkgs; [
     pkgsUnstable.maple-mono.Normal-NF-CN-unhinted
     noto-fonts-cjk-sans
