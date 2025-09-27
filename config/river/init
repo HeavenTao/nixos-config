@@ -1,0 +1,34 @@
+#!/bin/sh
+
+riverctl spawn 'fcitx5 -d'
+riverctl spawn 'wbg /home/ht/.config/wallpapers/bg.jpeg'
+
+riverctl keyboard-layout -options "ctrl:nocaps" us
+
+riverctl map normal Super Return spawn 'kitty -e tmux' 
+riverctl map normal Control Space spawn 'fcitx5-remote -t'
+riverctl map normal Super P spawn "wmenu-run -f 'Maple Mono Normal NF CN 14' -S '#9d7cd8' -p ' '   -M '#9d7cd8'"
+riverctl map normal Super B spawn "google-chrome-stable"
+
+riverctl map normal Super U focus-output left
+riverctl map normal Super I focus-output right
+riverctl map normal Super C close
+riverctl map normal Super H focus-view left
+riverctl map normal Super L focus-view right
+riverctl map normal Super J focus-view down
+riverctl map normal Super K focus-view up
+
+riverctl map normal Super Left send-layout-cmd rivertile "main-ratio +0.1"
+riverctl map normal Super Right send-layout-cmd rivertile "main-ratio -0.1"
+
+riverctl map normal Super+Shift Left send-to-output left
+riverctl map normal Super+Shift Right send-to-output right
+
+riverctl map normal Super F toggle-fullscreen
+
+
+riverctl set-repeat 50 200
+
+riverctl default-layout rivertile
+
+rivertile -main-location right &
