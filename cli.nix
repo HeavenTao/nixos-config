@@ -5,6 +5,7 @@
   ...
 }: let
   packages = with pkgs; [
+    tldr
     git
     lazygit
     ripgrep
