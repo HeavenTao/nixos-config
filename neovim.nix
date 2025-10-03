@@ -15,6 +15,7 @@
 
   # lsp packages
   lspPackages = with pkgs; [
+    yaml-language-server
     lua-language-server
     vue-language-server
     args.pkgsUnstable.nil
@@ -31,6 +32,7 @@
     nodePackages.prettier
     prettierd
     stylua
+    yamlfmt
   ];
 
   #debugger

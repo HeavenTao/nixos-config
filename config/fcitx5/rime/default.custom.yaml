@@ -1,0 +1,5 @@
+# 本目录需要copy到~/.local/share/fcitx5/rime/目录下
+patch:
+  schema_list:
+    - schema: rime_ice
+    - schema: luna_pinyin

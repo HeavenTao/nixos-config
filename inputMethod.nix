@@ -30,6 +30,12 @@ in {
       addons = with pkgs; [
         # rime-zhwiki
         # rime-data
+        # rime的数据目录在/home/ht/.local/share/fcitx5/rime下
+        # build为自动生成目录，不需要手动调整
+        # 输入法安装在rime目录下，通过*.custom.yaml覆盖修改
+        # 想要简单的安装就使用东风破插件进行
+        # rime_frontend=fcitx5-rime bash rime-install iDevl/rime-ice:others/recipes/full
+        # 安装完成之后的重启通过fcitx5-remote -r进行
         fcitx5-rime
         librime
         # fcitx5-chinese-addons
