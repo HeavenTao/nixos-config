@@ -10,11 +10,11 @@
   packages = with pkgs; [
     #terminal
     # alacritty
-    pkgsUnstable.ghostty
+    # pkgsUnstable.ghostty
     kitty
 
     #browser
-    firefox
+    # firefox
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"
@@ -28,6 +28,8 @@
     #editor
     #vscode
     wbg
+    waybar
+    wlr-randr
   ];
 in {
   environment.sessionVariables = {
