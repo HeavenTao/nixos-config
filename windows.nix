@@ -28,7 +28,6 @@
     #editor
     #vscode
     wbg
-    waybar
     wlr-randr
   ];
 in {
