@@ -29,6 +29,7 @@
     #vscode
     wbg
     wlr-randr
+    waybar
   ];
 in {
   environment.sessionVariables = {
