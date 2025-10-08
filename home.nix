@@ -53,6 +53,9 @@
   home.file.".config/wallpapers/bg.jpeg" = {
     source = ./wallpapers/bg.jpeg;
   };
+  home.file.".config/wallpapers/bg2.png" = {
+    source = ./wallpapers/bg2.png;
+  };
 
   # river
   home.file.".config/river/init" = {
