@@ -1,0 +1,44 @@
+* {
+  font-size: 16px;
+  font-family: Maple Mono Normal NF CN;
+  padding: 0;
+  margin: 0
+}
+
+window#waybar {
+  /* background-color: rgba(43, 48, 59, 0.5); */
+  background-color: #20281F;
+  /* #2e3440 */
+  /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+  color: #eceff4;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+#tags button {
+  font-weight: bold;
+  padding: 0px 11px;
+  color: white;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+#tags button.occupied {
+  color: lightgreen;
+}
+
+#tags button.focused {
+  color: white;
+  background-color: #9d7cd8;
+  border-radius: 0px;
+}
+
+#tags button.urgent {
+  color: #eceff4;
+  background-color: #bf616a;
+  border-radius: 0px;
+}
+
+#clock {
+  padding-right: 5px;
+}

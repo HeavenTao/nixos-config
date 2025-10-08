@@ -62,6 +62,14 @@
     source = ./config/river/init;
   };
 
+  # waybar
+  home.file.".config/waybar/config.jsonc" = {
+    source = ./config/waybar/config.jsonc;
+  };
+  home.file.".config.waybar/style.css" = {
+    source = ./config/waybar/style.css;
+  };
+
   home.stateVersion = "25.05";
   home.enableNixpkgsReleaseCheck = false;
 }

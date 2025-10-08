@@ -11,6 +11,7 @@
     #terminal
     # alacritty
     # pkgsUnstable.ghostty
+    foot
     kitty
 
     #browser
