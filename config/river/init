@@ -44,6 +44,9 @@ do
   riverctl map normal Super $i set-focused-tags $tags
 done
 
+# Cursor
+riverctl xcursor-theme Moga-Neon-Blue 48
+
 # layout初始化
 riverctl default-layout rivertile
 rivertile -outer-padding 2 -main-location right &

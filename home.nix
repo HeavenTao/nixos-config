@@ -70,6 +70,12 @@
     source = ./config/waybar/style.css;
   };
 
+  # cursor
+  home.file.".icons/" = {
+    source = ./config/cursor;
+    recursive = true;
+  };
+
   home.stateVersion = "25.05";
   home.enableNixpkgsReleaseCheck = false;
 }
