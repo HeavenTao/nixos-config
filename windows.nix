@@ -31,6 +31,8 @@
     wbg
     wlr-randr
     waybar
+    # aria2
+    amule
   ];
 in {
   environment.sessionVariables = {
@@ -46,6 +48,8 @@ in {
   # programs.niri.package = pkgs.niri;
 
   programs.river.enable = true;
+
+  virtualisation.virtualbox.host.enable = true;
 
   fonts.packages = with pkgs; [
     pkgsUnstable.maple-mono.Normal-NF-CN-unhinted

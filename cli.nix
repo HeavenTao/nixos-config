@@ -22,14 +22,23 @@
     # lnav
     zip
     unzip
+    p7zip
+    unrar
     #domain name server
     #dig @8.8.8.8 google.com
     # dig
     translate-shell
     zoxide
-    gnumake
     wev
+    #ftp client
+    ncftp
+    #fs system
+    exfat
+    ntfs3g
   ];
 in {
   users.users.${args.userName}.packages = packages;
+  virtualisation.docker = {
+    enable = true;
+  };
 }

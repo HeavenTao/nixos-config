@@ -6,7 +6,7 @@
 }: {
   users.users.${userName} = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "docker"];
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;
   };
