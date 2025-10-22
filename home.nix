@@ -3,19 +3,21 @@
   lib,
   config,
   ...
-}: {
-  # cli
+}: let
+  path = /home/ht/.config/nixos-config;
+in {
+  #cli
   # zsh
   home.file.".zshrc" = {
-    source = ./config/zsh/zshrc;
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/zsh/zshrc);
   };
   home.file.".zimrc" = {
-    source = ./config/zsh/zimrc;
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/zsh/zimrc);
   };
 
   # tmux
   home.file.".tmux.conf" = {
-    source = ./config/tmux/tmux.conf;
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/tmux/tmux.conf);
   };
 
   #windows
@@ -35,7 +37,7 @@
 
   #kitty
   home.file.".config/kitty/kitty.conf" = {
-    source = ./config/kitty/kitty.conf;
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/kitty/kitty.conf);
   };
   home.file.".config/kitty/kitty.conf.bak" = {
     source = ./config/kitty/kitty.conf.bak;
@@ -59,15 +61,15 @@
 
   # river
   home.file.".config/river/init" = {
-    source = ./config/river/init;
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/river/init);
   };
 
   # waybar
   home.file.".config/waybar/config.jsonc" = {
-    source = ./config/waybar/config.jsonc;
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/waybar/config.jsonc);
   };
   home.file.".config/waybar/style.css" = {
-    source = ./config/waybar/style.css;
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/waybar/style.css);
   };
 
   # cursor
