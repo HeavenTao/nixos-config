@@ -3,13 +3,12 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
-{userName}: {
-  config,
-  lib,
+{
+  userName,
   pkgs,
   ...
 }: let
-  packages = with pkgs; [
+  packages = [
   ];
 in {
   users.users.${userName}.packages = packages;

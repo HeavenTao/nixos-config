@@ -25,21 +25,17 @@
     nixosConfigurations = {
       wsl = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {
+          isInWsl = true;
+          inherit userName;
+          inherit pkgsUnstable;
+        };
         modules = [
-          (import ./configuration.nix {isInWsl = true;})
-          (import ./neovim.nix {
-            userName = userName;
-            pkgsUnstable = pkgsUnstable;
-            system = system;
-          })
-          (import ./shell.nix {
-            userName = userName;
-          })
-          (import ./cli.nix {
-            userName = userName;
-            pkgsUnstable = pkgsUnstable;
-          })
-          (import ./user.nix {userName = userName;})
+          ./configuration.nix
+          ./neovim.nix
+          ./shell.nix
+          ./cli.nix
+          ./user.nix
           nixos-wsl.nixosModules.default
           {
             system.stateVersion = "25.05";
@@ -57,27 +53,20 @@
       };
       home = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {
+          isInWsl = false;
+          inherit userName;
+          inherit pkgsUnstable;
+        };
         modules = [
-          (import ./inputMethod.nix {userName = userName;})
-          (import ./configuration.nix {isInWsl = false;})
-          (import ./neovim.nix {
-            userName = userName;
-            pkgsUnstable = pkgsUnstable;
-            system = system;
-          })
-          (import ./shell.nix {
-            userName = userName;
-          })
-          (import ./cli.nix {
-            userName = userName;
-            pkgsUnstable = pkgsUnstable;
-          })
-          (import ./user.nix {userName = userName;})
-          (import ./windows.nix {
-            userName = userName;
-            pkgsUnstable = pkgsUnstable;
-          })
-          (import ./proxy.nix {userName = userName;})
+          ./inputMethod.nix
+          ./configuration.nix
+          ./neovim.nix
+          ./shell.nix
+          ./cli.nix
+          ./user.nix
+          ./windows.nix
+          ./proxy.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

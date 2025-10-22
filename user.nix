@@ -1,7 +1,6 @@
-{userName}: {
+{
+  userName,
   pkgs,
-  lib,
-  config,
   ...
 }: {
   users.users.${userName} = {

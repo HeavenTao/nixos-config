@@ -1,10 +1,7 @@
 {
   userName,
   pkgsUnstable,
-}: {
-  lib,
   pkgs,
-  config,
   ...
 }: let
   packages = with pkgs; [

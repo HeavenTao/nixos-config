@@ -1,7 +1,6 @@
-{userName}: {
-  lib,
+{
+  userName,
   pkgs,
-  config,
   ...
 }: let
   packages = with pkgs; [

@@ -1,7 +1,6 @@
-{...} @ args: {
-  lib,
+{
+  userName,
   pkgs,
-  config,
   ...
 }: let
   packages = with pkgs; [
@@ -37,7 +36,7 @@
     ntfs3g
   ];
 in {
-  users.users.${args.userName}.packages = packages;
+  users.users.${userName}.packages = packages;
   virtualisation.docker = {
     enable = true;
   };
