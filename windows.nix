@@ -40,7 +40,7 @@ in {
 
   programs.river.enable = true;
 
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
 
   fonts.packages = with pkgs; [
     pkgsUnstable.maple-mono.Normal-NF-CN-unhinted

@@ -14,11 +14,9 @@
     eza
     file
     tmux
-    # yazi
     lf
     btop
-    # mdbook #markdown edit server
-    # lnav
+
     zip
     unzip
     p7zip
@@ -36,6 +34,7 @@
   ];
 in {
   users.users.${userName}.packages = packages;
+
   virtualisation.docker = {
     enable = true;
   };
