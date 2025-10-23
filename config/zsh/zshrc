@@ -1,3 +1,4 @@
+#
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -174,3 +175,6 @@ fzf_nvim_open ()
 
 zle -N fzf_nvim_open
 bindkey '^F' fzf_nvim_open
+
+
+source ~/.config/zsh/docker_zsh

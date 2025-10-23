@@ -14,6 +14,9 @@ in {
   home.file.".zimrc" = {
     source = config.lib.file.mkOutOfStoreSymlink (path + /config/zsh/zimrc);
   };
+  home.file.".config/zsh/docker_zsh" = {
+    source = ./config/zsh/docker_zsh;
+  };
 
   # tmux
   home.file.".tmux.conf" = {
