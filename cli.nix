@@ -28,7 +28,6 @@
     # dig
     translate-shell
     zoxide
-    wev
     #ftp client
     ncftp
     #fs system

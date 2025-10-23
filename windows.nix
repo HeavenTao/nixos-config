@@ -6,29 +6,23 @@
 }: let
   packages = with pkgs; [
     #terminal
-    # alacritty
     # pkgsUnstable.ghostty
-    foot
     kitty
-
     #browser
-    # firefox
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"
         "--ozone-platform=wayland"
       ];
     })
-    # rofi-wayland
+
     wl-clipboard
     wmenu
-
-    #editor
-    #vscode
     wbg
     wlr-randr
     waybar
-    # aria2
+    wev
+
     amule
   ];
 in {
