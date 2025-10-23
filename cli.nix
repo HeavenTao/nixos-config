@@ -31,6 +31,12 @@
     #fs system
     exfat
     ntfs3g
+
+    pandoc
+    mdbook
+
+    #AI CLI
+    gemini-cli
   ];
 in {
   users.users.${userName}.packages = packages;
