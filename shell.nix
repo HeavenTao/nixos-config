@@ -4,7 +4,6 @@
   ...
 }: let
   packages = with pkgs; [
-    fish
     zsh
   ];
 in {
