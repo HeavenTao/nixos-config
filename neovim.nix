@@ -25,6 +25,8 @@
     pkgsUnstable.zls_0_15
     yaml-language-server
     vscode-extensions.vadimcn.vscode-lldb
+    #bash
+    bash-language-server
   ];
   # formatter packages
   formatterPackages = with pkgs; [
@@ -33,6 +35,7 @@
     prettierd
     stylua
     yamlfmt
+    shfmt
   ];
 
   #debugger
