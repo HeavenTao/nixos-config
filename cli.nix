@@ -37,6 +37,7 @@
 
     #AI CLI
     gemini-cli
+    (pkgs.callPackage ./iflow.nix {})
   ];
 in {
   users.users.${userName}.packages = packages;
