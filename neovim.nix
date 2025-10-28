@@ -21,6 +21,7 @@
     pkgsUnstable.nil
     typescript-language-server
     vscode-langservers-extracted
+    bash-language-server
     # zls
     pkgsUnstable.zls_0_15
     yaml-language-server
@@ -33,6 +34,7 @@
     prettierd
     stylua
     yamlfmt
+    shfmt
   ];
 
   #debugger
