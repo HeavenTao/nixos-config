@@ -14,7 +14,6 @@ riverctl keyboard-layout -options "ctrl:nocaps" us
 
 # 按键修改
 riverctl map normal Super Return spawn 'kitty -e tmux'
-riverctl map normal Super+Control Return spawn 'kitty'
 
 riverctl map normal Control Space spawn 'fcitx5-remote -t'
 riverctl map normal Super P spawn "wmenu-run -f 'Maple Mono Normal NF CN 14' -S '#9d7cd8' -p ' '   -M '#9d7cd8'"
