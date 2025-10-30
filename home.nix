@@ -23,12 +23,6 @@ in {
     source = config.lib.file.mkOutOfStoreSymlink (path + /config/tmux/tmux.conf);
   };
 
-  #iflow
-  home.file.".iflow" = {
-    source = config.lib.file.mkOutOfStoreSymlink (path + ./config/iflow);
-    recursive = true;
-  };
-
   #windows
   # niri
   # home.file.".config/niri/config.kdl" = {
