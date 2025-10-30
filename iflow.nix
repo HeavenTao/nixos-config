@@ -1,11 +1,11 @@
 {pkgs, ...}:
 pkgs.stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "iflow";
-  version = "0.3.9";
+  version = "0.3.11";
 
   src = pkgs.fetchurl {
-    url = "https://registry.npmjs.org/@iflow-ai/iflow-cli/-/iflow-cli-0.3.10.tgz";
-    hash = "sha256-mEVC4Wpk95imfww/n/W0OtEbS97c/8CDomW3a5k3dZQ=";
+    url = "https://registry.npmjs.org/@iflow-ai/iflow-cli/-/iflow-cli-0.3.11.tgz";
+    hash = "sha256-H9SqYh3jN064hdbhQWauuBqqfRyiP2X9YYDPc8qDr7s=";
   };
 
   buildInputs = [
