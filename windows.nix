@@ -35,10 +35,11 @@ in {
     gdm.enable = true;
     gdm.wayland = true;
   };
-  # programs.niri.enable = true;
-  # programs.niri.package = pkgs.niri;
 
-  programs.river.enable = true;
+  programs.niri.enable = true;
+  programs.niri.package = pkgs.niri;
+
+  # programs.river.enable = true;
 
   # virtualisation.virtualbox.host.enable = true;
 

@@ -25,9 +25,9 @@ in {
 
   #windows
   # niri
-  # home.file.".config/niri/config.kdl" = {
-  #   source = ./config/niri/config.kdl;
-  # };
+  home.file.".config/niri/config.kdl" = {
+    source = config.lib.file.mkOutOfStoreSymlink (path + /config/niri/config.kdl);
+  };
   # fcitx5
   home.file.".local/share/fcitx5/themes/macOS-dark" = {
     source = ./config/fcitx5/themes/macOS-dark;
@@ -63,9 +63,9 @@ in {
   };
 
   # river
-  home.file.".config/river/init" = {
-    source = config.lib.file.mkOutOfStoreSymlink (path + /config/river/init);
-  };
+  # home.file.".config/river/init" = {
+  #   source = config.lib.file.mkOutOfStoreSymlink (path + /config/river/init);
+  # };
 
   # waybar
   home.file.".config/waybar/config.jsonc" = {

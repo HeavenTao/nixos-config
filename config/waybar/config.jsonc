@@ -7,15 +7,9 @@
   "position": "top",
   "height": 28,
   "spacing": 4,
-  "modules-left": [
-    "river/tags"
-  ],
   "modules-center": [
     "clock"
   ],
-  "river/tags": {
-    "num-tags": 3
-  },
   "clock": {
     "format": "{:%Y-%m-%d %A %H:%M}",
     "interval": 60,

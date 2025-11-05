@@ -52,36 +52,36 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
-    // Uncomment this line to disable this output.
-    // off
-
-    // Resolution and, optionally, refresh rate of the output.
-    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-    // If the refresh rate is omitted, niri will pick the highest refresh rate
-    // for the resolution.
-    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
-
-    // Scale is a floating-point number, but at the moment only integer values work.
-    scale 2.0
-
-    // Transform allows to rotate the output counter-clockwise, valid values are:
-    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-    transform "normal"
-
-    // Position of the output in the global coordinate space.
-    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
-    // The cursor can only move between directly adjacent outputs.
-    // Output scale and rotation has to be taken into account for positioning:
-    // outputs are sized in logical, or scaled, pixels.
-    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
-    // so to put another output directly adjacent to it on the right, set its x to 1920.
-    // If the position is unset or results in an overlap, the output is instead placed
-    // automatically.
-    position x=1280 y=0
-}
+// output "eDP-1" {
+//     // Uncomment this line to disable this output.
+//     // off
+//
+//     // Resolution and, optionally, refresh rate of the output.
+//     // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
+//     // If the refresh rate is omitted, niri will pick the highest refresh rate
+//     // for the resolution.
+//     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
+//     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+//     mode "1920x1080@120.030"
+//
+//     // Scale is a floating-point number, but at the moment only integer values work.
+//     scale 2.0
+//
+//     // Transform allows to rotate the output counter-clockwise, valid values are:
+//     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+//     transform "normal"
+//
+//     // Position of the output in the global coordinate space.
+//     // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
+//     // The cursor can only move between directly adjacent outputs.
+//     // Output scale and rotation has to be taken into account for positioning:
+//     // outputs are sized in logical, or scaled, pixels.
+//     // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
+//     // so to put another output directly adjacent to it on the right, set its x to 1920.
+//     // If the position is unset or results in an overlap, the output is instead placed
+//     // automatically.
+//     position x=1280 y=0
+// }
 output "DVI-D-1" {
         mode "1920x1200@59.950"
         scale 1.0
@@ -204,7 +204,8 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 //spawn-at-startup "hyprpaper" "-c" "/home/ht/.config/niri/hyprpaper.conf"
 spawn-at-startup "fcitx5 -d"
-spawn-at-startup "wbg" "/home/ht/.config/wallpapers/bg.jpeg"
+spawn-at-startup "wbg" "/home/ht/.config/wallpapers/bg2.png"
+spawn-at-startup "waybar"
 //spawn-at-startup "ags"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -256,15 +257,15 @@ window-rule {
 }
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
+// /-window-rule {
+//     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+//     match app-id=r#"^org\.gnome\.World\.Secrets$"#
+//
+//     block-out-from "screen-capture"
+//
+//     // Use this instead if you want them visible on third-party screenshot tools.
+//     // block-out-from "screencast"
+// }
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
@@ -288,6 +289,8 @@ binds {
     Mod+P { spawn "wmenu-run" "-f" "16" "-S" "#9d7cd8" "-p" " " "-M" "#9d7cd8"; }
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
+    // Browser
+    Mod+B { spawn "google-chrome-stable"; }
     //Super+Alt+L { spawn "swaylock"; }
 
     //switch input methods
@@ -493,6 +496,13 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     //Mod+Shift+P { power-off-monitors; }
+}
+
+cursor {
+ xcursor-theme "Moga-Neon-Blue"
+ xcursor-size 48
+
+ hide-when-typing
 }
 
 hotkey-overlay {
