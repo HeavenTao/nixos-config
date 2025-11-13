@@ -38,6 +38,7 @@
     #AI CLI
     gemini-cli
     (pkgs.callPackage ./iflow.nix {})
+    fastfetch
   ];
 in {
   users.users.${userName}.packages = packages;
