@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     nixpkgs-unstable.url = "https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     home-manager = {
@@ -38,7 +38,7 @@
           ./user.nix
           nixos-wsl.nixosModules.default
           {
-            system.stateVersion = "25.05";
+            system.stateVersion = "25.11";
             wsl.enable = true;
             wsl.defaultUser = userName;
             wsl.useWindowsDriver = true;
