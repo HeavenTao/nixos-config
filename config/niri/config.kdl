@@ -204,7 +204,7 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 //spawn-at-startup "hyprpaper" "-c" "/home/ht/.config/niri/hyprpaper.conf"
 spawn-at-startup "fcitx5 -d"
-spawn-at-startup "wbg" "/home/ht/.config/wallpapers/bg2.png"
+spawn-at-startup "wbg" "-s" "/home/ht/.config/wallpapers/bg2.png"
 spawn-at-startup "waybar"
 //spawn-at-startup "ags"
 
