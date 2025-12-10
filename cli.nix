@@ -4,40 +4,31 @@
   ...
 }: let
   packages = with pkgs; [
-    tldr
+    tldr #simple man
     git
-    lazygit
-    ripgrep
-    fd
-    fzf
-    bat
-    eza
-    file
+    lazygit #cligit
+    ripgrep #content search
+    fd #file finder
+    fzf #search
+    bat #cat
+    eza #ls
+    file #show file type
     tmux
-    lf
-    btop
-
+    lf #cli file manager
+    btop #cli system status
     zip
     unzip
     p7zip
     unrar
-    #domain name server
-    #dig @8.8.8.8 google.com
-    # dig
-    translate-shell
-    zoxide
-    #ftp client
-    ncftp
-    #fs system
+    translate-shell #translate
+    zoxide #fast cd
+    ncftp #ftp cli client
     exfat
     ntfs3g
-
-    pandoc
-    mdbook
-
-    #AI CLI
-    gemini-cli
-    (pkgs.callPackage ./iflow.nix {})
+    pandoc #doc type translate
+    mdbook #markdown show
+    gemini-cli #cli ai
+    (pkgs.callPackage ./iflow.nix {}) #cli ai
     fastfetch
   ];
 in {
