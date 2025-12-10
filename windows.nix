@@ -22,7 +22,7 @@
     wlr-randr
     waybar
     wev
-
+    filezilla
     amule
   ];
 in {

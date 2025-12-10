@@ -150,7 +150,6 @@ alias log="journalctl -o short-full"
 alias v="nvim"
 alias stopmihomo="systemctl stop mihomo"
 alias startmihomo="systemctl restart mihomo"
-alias ls='eza -h --total-size --group-directories-first  --time-style "+%Y-%m-%d %H:%M:%S"'
 
 # options
 # 默认选中第一个
