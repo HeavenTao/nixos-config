@@ -31,6 +31,7 @@
     (pkgs.callPackage ./iflow.nix {}) #cli ai
     fastfetch
     unixtools.netstat
+    quickemu
   ];
 in {
   users.users.${userName}.packages = packages;
