@@ -32,6 +32,7 @@
     fastfetch
     unixtools.netstat
     quickemu
+    gnumake
   ];
 in {
   users.users.${userName}.packages = packages;
