@@ -23,7 +23,6 @@
     waybar
     wev
     filezilla
-    amule
   ];
 in {
   environment.sessionVariables = {
@@ -31,7 +30,7 @@ in {
     NIXOS_OZONE_WL = 1;
   };
   users.users.${userName}.packages = packages;
-  services.xserver.displayManager = {
+  services.displayManager = {
     gdm.enable = true;
     gdm.wayland = true;
   };

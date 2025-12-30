@@ -11,8 +11,9 @@
     "clock"
   ],
   "clock": {
-    "format": "{:%Y-%m-%d %A %H:%M}",
+    "format": "󰃭  {:%Y-%m-%d %A %H:%M} ",
     "interval": 60,
+    "tooltip": false,
     "timezones": [
       "Asia/Shanghai"
     ]

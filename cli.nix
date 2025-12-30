@@ -33,6 +33,7 @@
     net-tools
     quickemu
     gnumake
+    llama-cpp
   ];
 in {
   users.users.${userName}.packages = packages;
