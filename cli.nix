@@ -34,6 +34,7 @@
     quickemu
     gnumake
     llama-cpp
+    ollama
   ];
 in {
   users.users.${userName}.packages = packages;
