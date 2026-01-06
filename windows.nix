@@ -1,12 +1,11 @@
 {
   userName,
-  pkgsUnstable,
   pkgs,
   ...
 }: let
   packages = with pkgs; [
     #terminal
-    # pkgsUnstable.ghostty
+    # ghostty
     kitty
     #browser
     (google-chrome.override {
@@ -15,7 +14,6 @@
         "--ozone-platform=wayland"
       ];
     })
-
     wl-clipboard
     wmenu
     wbg
@@ -38,12 +36,10 @@ in {
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
 
-  # programs.river.enable = true;
-
   # virtualisation.virtualbox.host.enable = true;
 
   fonts.packages = with pkgs; [
-    pkgsUnstable.maple-mono.Normal-NF-CN-unhinted
+    maple-mono.Normal-NF-CN-unhinted
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     nerd-fonts.noto

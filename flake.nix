@@ -24,11 +24,11 @@
   in {
     nixosConfigurations = {
       wsl = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        system = system;
         specialArgs = {
           isInWsl = true;
           inherit userName;
-          inherit pkgsUnstable;
+          # inherit pkgsUnstable;
         };
         modules = [
           ./configuration.nix
@@ -52,11 +52,11 @@
         ];
       };
       home = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        system = system;
         specialArgs = {
           isInWsl = false;
           inherit userName;
-          inherit pkgsUnstable;
+          # inherit pkgsUnstable;
         };
         modules = [
           ./inputMethod.nix

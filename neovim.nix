@@ -1,5 +1,4 @@
 {
-  pkgsUnstable,
   userName,
   pkgs,
   ...
@@ -9,7 +8,7 @@
     llvmPackages_19.libcxxClang
     llvmPackages_19.clang-unwrapped
     # zig
-    pkgsUnstable.zig_0_15
+    zig
     # dotnetCorePackages.dotnet_8.sdk
   ];
 
@@ -18,12 +17,11 @@
     yaml-language-server
     lua-language-server
     vue-language-server
-    pkgsUnstable.nil
+    nil
     typescript-language-server
     vscode-langservers-extracted
     bash-language-server
-    # zls
-    pkgsUnstable.zls_0_15
+    zls
     yaml-language-server
     vscode-extensions.vadimcn.vscode-lldb
     #bash
@@ -52,7 +50,7 @@ in {
     withNodeJs = true;
     withPython3 = true;
     defaultEditor = true;
-    package = pkgsUnstable.neovim-unwrapped;
+    package = pkgs.neovim-unwrapped;
   };
   # environment.sessionVariables = {
   #   DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";

@@ -28,6 +28,7 @@
     pandoc #doc type translate
     mdbook #markdown show
     gemini-cli #cli ai
+    qwen-code
     (pkgs.callPackage ./iflow.nix {}) #cli ai
     fastfetch
     net-tools
