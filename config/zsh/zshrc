@@ -142,6 +142,8 @@ export GROFF_NO_SGR=1
 
 export FZF_DEFAULT_COMMAND="fd --type f"
 
+export PATH="$PATH:$HOME/.npm-global/bin"
+
 
 # alias
 alias cat="bat"
