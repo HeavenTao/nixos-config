@@ -27,15 +27,12 @@
     ntfs3g
     pandoc #doc type translate
     mdbook #markdown show
-    gemini-cli #cli ai
-    # qwen-code
-    # (pkgs.callPackage ./iflow.nix {}) #cli ai
-    (pkgs.callPackage ./qwen.nix {}) #cli ai
     fastfetch
     net-tools
     quickemu
     gnumake
     llama-cpp
+    nodejs_24
   ];
 in {
   users.users.${userName}.packages = packages;
