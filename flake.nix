@@ -42,6 +42,7 @@
             wsl.enable = true;
             wsl.defaultUser = userName;
             wsl.useWindowsDriver = true;
+            wsl.interop.includePath = false;
           }
           home-manager.nixosModules.home-manager
           {

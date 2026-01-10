@@ -14,13 +14,11 @@
 
   # lsp packages
   lspPackages = with pkgs; [
-    yaml-language-server
     lua-language-server
     vue-language-server
     nil
     typescript-language-server
     vscode-langservers-extracted
-    bash-language-server
     zls
     yaml-language-server
     vscode-extensions.vadimcn.vscode-lldb
