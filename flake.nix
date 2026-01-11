@@ -67,7 +67,7 @@
           ./cli.nix
           ./user.nix
           ./windows.nix
-          ./proxy.nix
+          ./network.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

@@ -8,6 +8,7 @@
     # ghostty
     kitty
     #browser
+    firefox
     (google-chrome.override {
       commandLineArgs = [
         "--enable-features=UseOzonePlatform"
@@ -26,6 +27,8 @@ in {
   environment.sessionVariables = {
     #wayland vscode
     NIXOS_OZONE_WL = 1;
+    # https_proxy = "http://127.0.0.1:7890";
+    # http_proxy = "http://127.0.0.1:7890";
   };
   users.users.${userName}.packages = packages;
   services.displayManager = {

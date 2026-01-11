@@ -33,6 +33,7 @@
     gnumake
     llama-cpp
     nodejs_24
+    wget
   ];
 in {
   users.users.${userName}.packages = packages;
