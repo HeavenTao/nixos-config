@@ -28,7 +28,7 @@
         specialArgs = {
           isInWsl = true;
           inherit userName;
-          # inherit pkgsUnstable;
+          inherit pkgsUnstable;
         };
         modules = [
           ./configuration.nix

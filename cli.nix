@@ -1,6 +1,7 @@
 {
   userName,
   pkgs,
+  pkgsUnstable,
   ...
 }: let
   packages = with pkgs; [
@@ -34,6 +35,7 @@
     llama-cpp
     nodejs_24
     wget
+    pkgsUnstable.opencode
   ];
 in {
   users.users.${userName}.packages = packages;
