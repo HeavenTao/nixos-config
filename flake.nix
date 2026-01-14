@@ -57,7 +57,7 @@
         specialArgs = {
           isInWsl = false;
           inherit userName;
-          # inherit pkgsUnstable;
+          inherit pkgsUnstable;
         };
         modules = [
           ./inputMethod.nix
