@@ -37,7 +37,7 @@
 
   #debugger
   debuggerPackages = with pkgs; [
-    lldb_19
+    lldb
   ];
   #meger
   allPackages = [lspPackages formatterPackages codePackages debuggerPackages];
@@ -50,7 +50,8 @@ in {
     defaultEditor = true;
     package = pkgs.neovim-unwrapped;
   };
-  # environment.sessionVariables = {
-  #   DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
-  # };
+  environment.sessionVariables = {
+    # DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
+    CODE_LLDB_PATH = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
+  };
 }
